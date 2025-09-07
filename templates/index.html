@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineCloud AI - Your Smart Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h3>MineCloud AI</h3>
+                <button class="close-sidebar" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="owner-info">
+                <div class="owner-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h4>Debasis Jaga Sebasi</h4>
+                <p class="title">DJS</p>
+                <p class="description">Freelancer • Founder of MineCloud</p>
+            </div>
+
+            <div class="links-section">
+                <h5>YouTube Channels</h5>
+                <div class="link-item">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/@PATSIM_99" target="_blank">DJS_YT</a>
+                </div>
+                <div class="link-item">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/@DJS_Vortex" target="_blank">DJS_Vortex</a>
+                </div>
+                <div class="link-item">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/@DJS_ANNIMEATION" target="_blank">DJS_ANNIMEATION</a>
+                </div>
+                <div class="link-item">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/@MeniCloud" target="_blank">MineCloud</a>
+                </div>
+                
+                <h5>Community</h5>
+                <div class="link-item">
+                    <i class="fab fa-discord"></i>
+                    <a href="https://discord.gg/zhA2GzMR" target="_blank">Discord Server</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-content">
+                <h1 class="title" id="mainTitle">MineCloud AI</h1>
+                <p class="subtitle">Your smart assistant by DJS</p>
+            </div>
+        </header>
+
+        <!-- Chat Area -->
+        <main class="chat-container">
+            <div class="chat-area" id="chatArea">
+                <div class="welcome-message">
+                    <div class="welcome-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Welcome to MineCloud AI!</h3>
+                        <p>I'm your intelligent assistant. Ask me anything to get started.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <input type="text" 
+                           id="messageInput" 
+                           placeholder="Type your message here..." 
+                           maxlength="500"
+                           autocomplete="off">
+                    <button class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-info">
+                    <span class="char-count" id="charCount">0/500</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 DJS / MineCloud</p>
+            <button class="back-to-top" id="backToTop" title="Back to Top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+                      </html>
+              
